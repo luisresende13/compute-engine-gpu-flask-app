@@ -23,7 +23,7 @@ pip install --upgrade pip virtualenv
 
 # Fetch source code
 export HOME=/root
-git clone https://github.com/luisresende13/compute-engine-flask-app.git /opt/app
+git clone https://github.com/luisresende13/compute-engine-gpu-flask-app.git /opt/app
 
 # Install Cloud Ops Agent
 sudo bash /opt/app/add-google-cloud-ops-agent-repo.sh --also-install
