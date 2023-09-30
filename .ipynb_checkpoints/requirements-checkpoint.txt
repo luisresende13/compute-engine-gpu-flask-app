@@ -2,3 +2,5 @@ flask==2.2.5
 honcho==1.1.0
 gunicorn==20.1.0
 tensorflow
+torch
+opencv-python
