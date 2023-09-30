@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
-import cv2
 import tensorflow as tf
 import torch
+import cv2
 
 app = Flask(__name__)
 
