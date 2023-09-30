@@ -17,7 +17,8 @@
 set -x
 
 MY_INSTANCE_NAME="gpu-app-instance"
-ZONE=southamerica-east1-
+# ZONE=southamerica-east1-a
+ZONE=us-east1-a
 
 gcloud compute instances delete $MY_INSTANCE_NAME \
     --zone=$ZONE --delete-disks=all

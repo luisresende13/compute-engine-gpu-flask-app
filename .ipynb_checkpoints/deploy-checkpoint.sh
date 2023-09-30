@@ -16,12 +16,14 @@ set -ex
 
 # [START getting_started_gce_create_instance]
 MY_INSTANCE_NAME="gpu-app-instance"
-ZONE=southamerica-east1-a
+# ZONE=southamerica-east1-a
+ZONE=us-east1-a
 
 gcloud compute instances create $MY_INSTANCE_NAME \
+    --accelerator type=nvidia-tesla-t4 \
     --image-family=debian-10 \
     --image-project=debian-cloud \
-    --machine-type=g1-small \
+    --machine-type=n1-standard-1 \
     --scopes userinfo-email,cloud-platform \
     --metadata-from-file startup-script=startup-script.sh \
     --zone $ZONE \
