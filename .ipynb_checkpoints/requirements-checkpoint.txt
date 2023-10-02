@@ -3,4 +3,7 @@ honcho==1.1.0
 gunicorn==20.1.0
 tensorflow
 torch
+torchvision
+torchaudio
 opencv-python
+ultralytics

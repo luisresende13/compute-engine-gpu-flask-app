@@ -15,17 +15,22 @@
 # Echo commands and fail on error
 set -ev
 
+# Set BASE_URL environment variable
+echo 'export BASE_URL="https://app.tixxi.rio/outvideo/?KEY=B0914&CODE={}"' >> /etc/environment
+source /etc/environment
+
 # [START getting_started_gce_startup_script]
 # Install or update needed software
 apt-get update
-apt-get install -yq git supervisor python python-pip python3-distutils ffmpeg libsm6 libxext6 -y
+apt-get install -yq git supervisor python python-pip python3-distutils
+apt-get install ffmpeg libsm6 libxext6 -y
 pip install --upgrade pip virtualenv
 
 # Install GPU drivers (add this section)
 # For example, if you're using NVIDIA drivers, you might do something like:
-wget https://us.download.nvidia.com/tesla/450.80.02/NVIDIA-Linux-x86_64-450.80.02.run
-chmod +x NVIDIA-Linux-x86_64-450.80.02.run
-./NVIDIA-Linux-x86_64-450.80.02.run -s --no-questions --ui=none
+# wget https://us.download.nvidia.com/tesla/450.80.02/NVIDIA-Linux-x86_64-450.80.02.run
+# chmod +x NVIDIA-Linux-x86_64-450.80.02.run
+# ./NVIDIA-Linux-x86_64-450.80.02.run -s --no-questions --ui=none
 
 # Fetch source code
 export HOME=/root
